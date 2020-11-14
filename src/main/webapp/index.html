@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+<form method="POST" action="/calculator">
+    <input type="text" id="operand1" name="operand1">
+    <select name="operation">
+        <option selected value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+    </select>
+    <input type="text" id="operand2" name="operand2">
+    <input type="hidden" id="more" name="more" value="1">
+    <input type="Submit">
+</form>
+</body>
+</html>
