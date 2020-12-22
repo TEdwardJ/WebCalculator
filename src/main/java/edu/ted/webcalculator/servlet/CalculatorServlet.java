@@ -32,11 +32,16 @@ public class CalculatorServlet extends HttpServlet {
             int result = service.multiply(operand1, operand2);
             out.println(result);
         } else if (operation.equals("divide")) {
+            if(operand2 == 0){
+                resp.sendRedirect("https://en.wikipedia.org/wiki/Division_by_zero");
+                return;
+            }
+
             double result = service.divide(operand1, operand2);
             out.println(result);
         }
         if (more.equals("1")) {
-            out.println("<a href='/'>More</a>");
+            out.println("<a href='"+req.getContextPath()+"/'>More</a>");
         }
         out.flush();
     }
